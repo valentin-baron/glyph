@@ -1,0 +1,21 @@
+[package]
+name = "glyph"
+version = "0.1.0"
+edition = "2024"
+authors = ["Valentin Baron<valentin.baron@outlook.com>"]
+categories = [
+    "Parsing tools",
+    "Parser implementations",
+    "GUI",
+    "Development tools",
+    "Data structures"
+]
+description = "DSL for declarative form design"
+homepage = "https://github.com/valentin-baron/glyph"
+license-file = "LICENSE"
+readme = "README.md"
+
+[dependencies]
+anyhow = "1.0.100"
+chumsky = { version = "0.12.0", features = ["pratt"] }
+serde = { version = "1.0.228", features = ["derive"] }

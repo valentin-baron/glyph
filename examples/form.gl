@@ -1,0 +1,49 @@
+@language ratatui
+@Form main_form {
+    title = "User Information"
+    layout = left-to-right
+    @Panel left_panel (
+        width = 50%
+        layout = free-form
+        @TextInput name_input (
+            label = "Name"
+            left = 2
+            top = 2
+            width = 40
+            placeholder = "Enter your name"
+        )
+        @Label name_label (
+            text = d"
+                Your name is: {name_input}
+            "
+            left = 2
+            top = 5
+            width = 40
+            word_wrap = true
+        )
+        @Button save_button (
+            text = "Save"
+            left = 2
+            top = 10
+            width = 10
+        )
+    )
+    @Panel right_panel (
+        width = 50%
+        layout = single-child
+        @Grid data_grid (
+            @Column id_column (
+                header = "ID"
+                width = 10%
+            )
+            @Column name_column (
+                header = "Name"
+                width = 45%
+            )
+            @Column email_column (
+                header = "Email"
+                width = 45%
+            )
+        )
+    )
+}
